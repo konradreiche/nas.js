@@ -15,7 +15,8 @@ module.exports = (grunt) ->
     coffee: {
       compile: {
         files: {
-          'js/nas.js': 'src/nas.coffe'
+          'js/nas.js': 'src/nas.coffe',
+          'spec/NasSpec.js': 'spec/NasSpec.coffee'
         }
       }
     },
@@ -43,11 +44,15 @@ module.exports = (grunt) ->
     watch: {
       coffee: {
         files: 'src/nas.coffee',
-        tasks: ['default']
+        tasks: ['coffee']
       }
       less: {
         files: 'less/nas.less',
         tasks: ['less']
+      }
+      test: {
+        files: 'spec/NasSpec.coffee',
+        tasks: ['coffee']
       }
     }
   })
