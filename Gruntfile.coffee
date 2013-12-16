@@ -24,13 +24,40 @@ module.exports = (grunt) ->
       options: {
         specs: 'spec/**/*.js'
       }
+    },
+    less: {
+      development: {
+        files: {
+          'css/nas.css': 'less/nas.less'
+        }
+      },
+      production: {
+        options: {
+          cleancss: true
+        },
+        files: {
+          'css/nas.css': 'less/nas.less'
+        }
+      },
+    },
+    watch: {
+      coffee: {
+        files: 'src/nas.coffee',
+        tasks: ['default']
+      }
+      less: {
+        files: 'less/nas.less',
+        tasks: ['less']
+      }
     }
   })
 
   # Load the plugin that provides the "uglify" task
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-jasmine')
+  grunt.loadNpmTasks('grunt-contrib-watch')
   
   # Default tasks
   grunt.registerTask('default', ['uglify'])
