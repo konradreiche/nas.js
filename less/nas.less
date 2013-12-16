@@ -1,0 +1,30 @@
+@bullet-size: 4px;
+@circle-size: 49px;
+@color: #555;
+
+.nas {
+  opacity: 0.5;
+  visibility: hidden;
+
+  .circle {
+    border: 2px solid @color;
+    width: @circle-size;
+    height: @circle-size;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 1px 1px 1px 0px #666;
+  
+    .bullet {
+      background-color: @color;
+      border: 2px solid @color;
+      width: @bullet-size;
+      height: @bullet-size;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      position: absolute;
+      -webkit-box-shadow: 1px 1px 1px 0px #666;
+    }
+  }
+}
