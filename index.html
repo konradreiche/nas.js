@@ -8,8 +8,23 @@
 
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
   <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <link rel="stylesheet" href="stylesheets/nas.css"/>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.transit.min.js"></script>
+  <script type="text/javascript" src="javascripts/nas.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      var nas = new Nas("#nas-container");
+      nas.start();
+    });
+  </script>
+  <style type="text/css" media="all">
+    #nas-container {
+      margin-bottom: 1em;
+    }
+  </style>
 
   <title>nas.js</title>
   <meta name="description" content="Not Another Spinner (nas.js) is a decent loading animation done with jquery.transit and CSS3.">
@@ -38,9 +53,9 @@
         <article class="markdown-body">
           <h1>
 <a name="nasjs" class="anchor" href="#nasjs"><span class="octicon octicon-link"></span></a>nas.js</h1>
-
 <p>Not Another Spinner (nas.js) is a decent loading animation done with jquery.transit and CSS3.</p>
-
+<div id="nas-container"></div>
+<div id="nas-container"></div>
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
